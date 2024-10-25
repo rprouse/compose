@@ -1,9 +1,5 @@
 {
-  "createdAt": "2024-02-23T16:58:31.616Z",
-  "updatedAt": "2024-02-23T16:58:31.616Z",
-  "id": "srOnR8PAY3u4RSwb",
   "name": "Demo workflow",
-  "active": false,
   "nodes": [
     {
       "parameters": {},
@@ -18,6 +14,26 @@
       "webhookId": "cdb5c076-d458-4b9d-8398-f43bd25059b1"
     },
     {
+      "parameters": {
+        "model": "llama3.1:latest",
+        "options": {}
+      },
+      "id": "89f9f5ba-5f74-45a4-a69e-058d5846a4d3",
+      "name": "Ollama Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
+      "typeVersion": 1,
+      "position": [
+        900,
+        580
+      ],
+      "credentials": {
+        "ollamaApi": {
+          "id": "C4FywZaCANfbNO2e",
+          "name": "Ollama account"
+        }
+      }
+    },
+    {
       "parameters": {},
       "id": "ce8c3da4-899c-4cc4-af73-8096c64eec64",
       "name": "Basic LLM Chain",
@@ -27,28 +43,9 @@
         880,
         340
       ]
-    },
-    {
-      "parameters": {
-        "model": "llama3.1:latest",
-        "options": {}
-      },
-      "id": "3dee878b-d748-4829-ac0a-cfd6705d31e5",
-      "name": "Ollama Chat Model",
-      "type": "@n8n/n8n-nodes-langchain.lmChatOllama",
-      "typeVersion": 1,
-      "position": [
-        900,
-        560
-      ],
-      "credentials": {
-        "ollamaApi": {
-          "id": "xHuYe0MDGOs9IpBW",
-          "name": "Local Ollama service"
-        }
-      }
     }
   ],
+  "pinData": {},
   "connections": {
     "Chat Trigger": {
       "main": [
@@ -61,7 +58,7 @@
         ]
       ]
     },
-    "Ollama Chat Model": {
+    "Ollama Chat Model1": {
       "ai_languageModel": [
         [
           {
@@ -73,15 +70,15 @@
       ]
     }
   },
+  "active": true,
   "settings": {
     "executionOrder": "v1"
   },
-  "staticData": null,
+  "versionId": "852a5acc-dd9e-4d4a-860c-f33d1cb03477",
   "meta": {
-    "templateCredsSetupCompleted": true
+    "templateCredsSetupCompleted": true,
+    "instanceId": "5cb91baa8c9c523c7fee9dd48f4677756b11e84e8f66db994aab660ebd889738"
   },
-  "pinData": {},
-  "versionId": "4e2affe6-bb1c-4ddc-92f9-dde0b7656796",
-  "triggerCount": 0,
+  "id": "srOnR8PAY3u4RSwb",
   "tags": []
 }
