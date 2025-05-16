@@ -1,7 +1,6 @@
-version: "3"
 services:
   sonarqube:
-    image: sonarqube:developer
+    image: sonarqube:community
     hostname: sonarqube
     container_name: sonarqube
     restart: unless-stopped
@@ -18,7 +17,7 @@ services:
     ports:
       - "9000:9000"
   db:
-    image: postgres:16
+    image: postgres:17
     hostname: postgresql
     container_name: postgresql
     restart: unless-stopped
